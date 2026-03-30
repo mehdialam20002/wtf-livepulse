@@ -77,7 +77,7 @@ async function runMigrations() {
   }
 }
 
-async function waitForDatabase(maxAttempts = 20, delayMs = 3000) {
+async function waitForDatabase(maxAttempts = 40, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
       await pool.query("SELECT 1");
